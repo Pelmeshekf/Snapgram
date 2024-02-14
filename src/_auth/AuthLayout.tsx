@@ -1,8 +1,8 @@
-import React from 'react';
-import { Outlet, Navigate } from 'react-router-dom';
+import React from 'react'
+import { Outlet, Navigate } from 'react-router-dom'
 
 const AuthLayout = () => {
-  const isAuthenticated = false;
+  const isAuthenticated = false
 
   return (
     <>
@@ -10,18 +10,18 @@ const AuthLayout = () => {
         <Navigate to="/" />
       ) : (
         <>
-          <section className="flex-1 justify-center items-center flex-copy-10">
+          <section className="flex flex-1 justify-center items-center flex-colpy-10">
             <Outlet />
           </section>
           <img
-            src="/public/assets/images/side-img.svg"
+            src={'/assets/images/side-img.svg'}
             alt="logo"
-            className="hidden x1:block h-screen w-1/2 object-cover bg-no-repeat"
+            className="hidden xl:block h-screen w-1/2 object-cover bg-no-repeat"
           />
         </>
       )}
     </>
-  );
-};
+  )
+}
 
-export default AuthLayout;
+export default AuthLayout
